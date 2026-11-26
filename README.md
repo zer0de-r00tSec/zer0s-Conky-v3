@@ -3,6 +3,10 @@
 Conky-Setup im Overdose-Warez-Crew-Look für einen 2560×1080-Desktop (Linux Mint / Cinnamon).
 Drei Fenster rahmen das OWC-Logo des Wallpapers ein, statt es zu verdecken:
 
+![Screenshot](screenshot.png)
+
+*Dia-Show und öffentliche IP sind im Screenshot unkenntlich gemacht.*
+
 | Fenster | Datei | Inhalt |
 |---|---|---|
 | Uhr | `owc_clock.conf` | Uhrzeit, Datum, System, öffentliche IP |
