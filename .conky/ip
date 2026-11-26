@@ -1,0 +1,12 @@
+#!/bin/bash
+# eigene oeffentliche IP anzeigen (mit Timeout, damit Conky nicht haengt)
+
+IP=$(curl -s --max-time 5 https://api.ipify.org)
+if [[ "$IP" =~ ^[0-9]{1,3}(\.[0-9]{1,3}){3}$ ]]; then
+  echo "$IP"
+else
+  # Fallback: alter Dienst
+  wget -q -T 5 -O - http://checkip.dyndns.org/ \
+    | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>' \
+    || echo "offline"
+fi
